@@ -11,4 +11,5 @@
 #  updated_at :datetime         not null
 #
 class Answer < ApplicationRecord
+    has_many_attached :images
 end
