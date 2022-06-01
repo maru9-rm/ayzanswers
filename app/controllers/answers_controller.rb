@@ -2,7 +2,10 @@ class AnswersController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @answers = answer.all
+        @grade1_answer = Answer.where(grade: 1)
+        @grade2_answer = Answer.where(grade: 2)
+        @grade3_answer = Answer.where(grade: 3)
+        @answers = Answer.all
     end
 
     def show
@@ -30,9 +33,9 @@ class AnswersController < ApplicationController
     def update
         @answer = current_user.answers.find(params[:id])
         if @answer.update(answer_params)
-            redirect_to answer_path(@answer), notice: '更新できました'
+            redirect_to answer_path(@answer), notice: '更新しました。'
         else
-            flash.now[:error] = '更新できませんでした'
+            flash.now[:error] = '更新できませんでした。'
             render :edit
         end
     end
@@ -40,13 +43,13 @@ class AnswersController < ApplicationController
     def destroy
         answer = current_user.answers.find(params[:id])
         answer.destroy!
-        redirect_to root_path, notice: '削除に成功しました'
+        redirect_to root_path, notice: '削除に成功しました。'
     end
 
     private
 
     def answer_params
-        params.require(:answer).permit(:title, :content, :eyecatch)
+        params.require(:answer).permit(:title, :memo, :grade, :subject, image: [])
     end
 
 end

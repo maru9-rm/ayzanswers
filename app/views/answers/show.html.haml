@@ -1,1 +1,12 @@
-show
+.container
+    .answer-info
+        #{@answer.grade}年
+
+        =@answer.title
+
+        =@answer.memo
+
+        =@answer.subject
+    .answer-image
+        -@answer.image.each do |image|
+            =image_tag image

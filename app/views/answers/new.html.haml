@@ -1,1 +1,29 @@
 new
+
+
+.container
+  %ul
+    - @answer.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @answer, local: true) do |f|
+    %div
+    = f.label :image, '解答画像'
+    %div
+    = f.file_field :image, multiple: true
+    %div
+      = f.label :title, 'タイトル'
+    %div
+      = f.text_field :title, class: ''
+    %div
+      = f.label :memo, '備考'
+    %div
+      = f.text_area :memo
+    %div
+      = f.label :grade, '学年'
+    %div
+      = f.select :grade, Answer.grades.map { |k, v| [ I18n.t("enum.grades.#{k}"), k ] }, {}, { class: '' }
+    %div
+      = f.label :subject, '教科'
+    %div
+      = f.select :subject, Answer.subjects.map { |k, v| [ I18n.t("enum.subjects.#{k}"), k ] }, {}, { class: '' }
+    = f.submit '保存', class: ''
