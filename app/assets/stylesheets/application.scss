@@ -1,0 +1,50 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+ 
+img {
+    width: 50%;
+}
+
+.subject-title {
+    width: 100%;
+    background-color:whitesmoke;
+}
+
+
+.subject-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.grade {
+    width: 30%;
+    min-width: 200px;
+
+}
+
+.grade1 {
+    background-color:#C7DEF1;
+}
+
+.grade2 {
+    background-color:#C7F1E8;
+}
+
+.grade3 {
+    background-color:#F8CDBC;
+}
+
+.juniorhigh {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.elementary {
+    background-color: navy;
+    color: white;
+}
