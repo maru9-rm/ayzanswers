@@ -1,23 +1,27 @@
 .container {
     width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
 
  
 img {
-    width: 50%;
+    width: 100%;
 }
 
 .subject-title {
     width: 100%;
     background-color:whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 
 .subject-section {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 
 }
 
@@ -42,9 +46,19 @@ img {
 .juniorhigh {
     background-color: darkslategrey;
     color: white;
+    font-size: 30px;
 }
 
 .elementary {
     background-color: navy;
     color: white;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.grade {
+    text-align: center;
+    border: 1px solid grey;
+    padding: 3px;
+    margin-bottom: 10px;
 }
