@@ -2,9 +2,61 @@ class AnswersController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @grade1_answer = Answer.where(grade: 1)
-        @grade2_answer = Answer.where(grade: 2)
-        @grade3_answer = Answer.where(grade: 3)
+        grade1_answers = Answer.where(grade: 1)
+        grade2_answers = Answer.where(grade: 2)
+        grade3_answers = Answer.where(grade: 3)
+        grade4_answers = Answer.where(grade: 4)
+        grade5_answers = Answer.where(grade: 5)
+        grade6_answers = Answer.where(grade: 6)
+
+        @grade1_answers_japanese = grade1_answers.where(subject: 1)
+        @grade1_answers_math = grade1_answers.where(subject: 2)
+        @grade1_answers_science = grade1_answers.where(subject: 3)
+        @grade1_answers_english = grade1_answers.where(subject: 4)
+        @grade1_answers_history = grade1_answers.where(subject: 5)
+        @grade1_answers_geography = grade1_answers.where(subject: 6)
+        @grade1_answers_civics = grade1_answers.where(subject: 7)
+
+        @grade2_answers_japanese = grade2_answers.where(subject: 1)
+        @grade2_answers_math = grade2_answers.where(subject: 2)
+        @grade2_answers_science = grade2_answers.where(subject: 3)
+        @grade2_answers_english = grade2_answers.where(subject: 4)
+        @grade2_answers_history = grade2_answers.where(subject: 5)
+        @grade2_answers_geography = grade2_answers.where(subject: 6)
+        @grade2_answers_civics = grade2_answers.where(subject: 7)
+
+        @grade3_answers_japanese = grade3_answers.where(subject: 1)
+        @grade3_answers_math = grade3_answers.where(subject: 2)
+        @grade3_answers_science = grade3_answers.where(subject: 3)
+        @grade3_answers_english = grade3_answers.where(subject: 4)
+        @grade3_answers_history = grade3_answers.where(subject: 5)
+        @grade3_answers_geography = grade3_answers.where(subject: 6)
+        @grade3_answers_civics = grade3_answers.where(subject: 7)
+
+        @grade4_answers_japanese = grade4_answers.where(subject: 1)
+        @grade4_answers_math = grade4_answers.where(subject: 2)
+        @grade4_answers_science = grade4_answers.where(subject: 3)
+        @grade4_answers_english = grade4_answers.where(subject: 4)
+        @grade4_answers_history = grade4_answers.where(subject: 5)
+        @grade4_answers_geography = grade4_answers.where(subject: 6)
+        @grade4_answers_civics = grade4_answers.where(subject: 7)
+
+        @grade5_answers_japanese = grade5_answers.where(subject: 1)
+        @grade5_answers_math = grade5_answers.where(subject: 2)
+        @grade5_answers_science = grade5_answers.where(subject: 3)
+        @grade5_answers_english = grade5_answers.where(subject: 4)
+        @grade5_answers_history = grade5_answers.where(subject: 5)
+        @grade5_answers_geography = grade5_answers.where(subject: 6)
+        @grade5_answers_civics = grade5_answers.where(subject: 7)
+
+        @grade6_answers_japanese = grade6_answers.where(subject: 1)
+        @grade6_answers_math = grade6_answers.where(subject: 2)
+        @grade6_answers_science = grade6_answers.where(subject: 3)
+        @grade6_answers_english = grade6_answers.where(subject: 4)
+        @grade6_answers_history = grade6_answers.where(subject: 5)
+        @grade6_answers_geography = grade6_answers.where(subject: 6)
+        @grade6_answers_civics = grade6_answers.where(subject: 7)
+
         @answers = Answer.all
     end
 

@@ -38,10 +38,10 @@ ActiveRecord::Schema.define(version: 2022_05_31_064057) do
 
   create_table "answers", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "title"
+    t.string "title", null: false
     t.text "memo"
-    t.integer "subject"
-    t.integer "grade"
+    t.integer "subject", null: false
+    t.integer "grade", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_answers_on_user_id"
