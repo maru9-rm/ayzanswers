@@ -1,12 +1,16 @@
-.container
-    .edit-button-area
-        =link_to '削除する', answer_path, data: { method: 'delete', confirm: "本当に削除しますか？"}
-        =link_to '戻る', root_path
-    .answer-info
-        %h1=I18n.t("enum.grades.#{@answer.grade}")
-        %h1=I18n.t("enum.subjects.#{@answer.subject}")
-        %h1=@answer.title
+.container.pt-5
+    =link_to root_path do
+        %button.btn.btn-primary.btn-lg 一覧ページに戻る
+    .answer-info.mb-5.mt-5
+        %h2=I18n.t("enum.grades.#{@answer.grade}")
+        %h2=I18n.t("enum.subjects.#{@answer.subject}")
         %h3=@answer.memo
-.answer-image
+        %h1=@answer.title
+        
+.answer-image.mt-5
     -@answer.image.each do |image|
         =image_tag image
+
+.container.pb-5.mt-100
+    =link_to answer_path, data: { method: 'delete', confirm: "本当に削除しますか？"} do
+        %button.btn.btn-danger.btn-lg.button-wide この答えを削除する

@@ -2,14 +2,22 @@
 @import "bootstrap";
 
 .container {
-    width: 80%;
-    margin: 0 auto;
     text-align: center;
 }
 
+h1 {
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 50px;
+
+}
  
 img {
     width: 100%;
+}
+
+.mt-100 {
+    margin-top: 100px;
 }
 
 .subject-title {
@@ -27,13 +35,8 @@ img {
 
 .subject-section {
     display: flex;
-    justify-content: space-between;
-
-}
-
-.grade {
-    width: 30%;
-    min-width: 200px;
+    justify-content:left;
+    flex-wrap: wrap;
 
 }
 
@@ -46,32 +49,52 @@ img {
     background-color: navy;
     color: white;
     font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+
 }
 
 .elementary {
-    background-color: navy;
+    background-color:teal;
     color: white;
     font-size: 30px;
-    margin-top: 40px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    border-radius: 10px;
 }
 
 .grade {
     text-align: center;
-    border: 1px solid grey;
+    border: 2px solid white;
+    background-color: whitesmoke;
+    border-radius: 10px;
     padding: 3px;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        display: block;
+    }
+    
+}
+
+.answer-item {
+    font-size: 1.5em;
 }
 
 
 .button {
     height: 45px;
     font-size: 20px;
+    margin-bottom: 20px;
 
 }
 
 .button-wide {
     width:80%;
-    margin-bottom: 20px;
+    
 }
 
 

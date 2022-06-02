@@ -1,200 +1,59 @@
-.container
+.container.mb-5
     %h1 再テスト模範解答
 
     -# = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete'}
     = link_to new_answer_path do 
-        %button.button.button-wide.btn.btn-primary 新しい解答を登録する
-    .juniorhigh 中学生
-    .subject-title 国語
+        %button.button.button-wide.btn.btn-primary 新しい答えを登録する
+    .juniorhigh 中学３年生
     .subject-section
-        .grade
-            .grade-title 中３
-            = render 'commons/answer_block', answers: @grade3_answers_japanese
-
-        .grade
-            .grade-title 中２
-            = render 'commons/answer_block', answers: @grade2_answers_japanese
-
-        .grade
-            .grade-title 中１
-            = render 'commons/answer_block', answers: @grade1_answers_japanese
-
-    .subject-title 数学
+        = render 'commons/answer_box', answers: @grade3_answers_japanese
+        = render 'commons/answer_box', answers: @grade3_answers_math
+        = render 'commons/answer_box', answers: @grade3_answers_history
+        = render 'commons/answer_box', answers: @grade3_answers_geography
+        = render 'commons/answer_box', answers: @grade3_answers_civics
+        = render 'commons/answer_box', answers: @grade3_answers_science
+        = render 'commons/answer_box', answers: @grade3_answers_english
+    .juniorhigh 中学２年生
     .subject-section
-        .grade
-            .grade-title 中３
-            = render 'commons/answer_block', answers: @grade3_answers_math
+        = render 'commons/answer_box', answers: @grade2_answers_japanese
+        = render 'commons/answer_box', answers: @grade2_answers_math
+        = render 'commons/answer_box', answers: @grade2_answers_history
+        = render 'commons/answer_box', answers: @grade2_answers_geography
+        = render 'commons/answer_box', answers: @grade2_answers_civics
+        = render 'commons/answer_box', answers: @grade2_answers_science
+        = render 'commons/answer_box', answers: @grade2_answers_english
+    .juniorhigh 中学１年生
+    .subject-section    
+        = render 'commons/answer_box', answers: @grade1_answers_japanese
+        = render 'commons/answer_box', answers: @grade1_answers_math
+        = render 'commons/answer_box', answers: @grade1_answers_history
+        = render 'commons/answer_box', answers: @grade1_answers_geography
+        = render 'commons/answer_box', answers: @grade1_answers_civics
+        = render 'commons/answer_box', answers: @grade1_answers_science
+        = render 'commons/answer_box', answers: @grade1_answers_english
 
-        .grade
-            .grade-title 中２
-            = render 'commons/answer_block', answers: @grade2_answers_math
 
-        .grade
-            .grade-title 中１
-            = render 'commons/answer_block', answers: @grade1_answers_math
-
-
-    .subject-title 社会
-    .subject-title-mini 歴史
+    .elementary 小学６年生
     .subject-section
-        .grade
-            .grade-title 中３
-            = render 'commons/answer_block', answers: @grade3_answers_history
-
-        .grade
-            .grade-title 中２
-            = render 'commons/answer_block', answers: @grade2_answers_history
-
-        .grade
-            .grade-title 中１
-            = render 'commons/answer_block', answers: @grade1_answers_history
-
-
-    .subject-title-mini 地理
+        = render 'commons/answer_box', answers: @grade6_answers_japanese
+        = render 'commons/answer_box', answers: @grade6_answers_math
+        = render 'commons/answer_box', answers: @grade6_answers_history
+        = render 'commons/answer_box', answers: @grade6_answers_geography
+        = render 'commons/answer_box', answers: @grade6_answers_civics
+        = render 'commons/answer_box', answers: @grade6_answers_science
+    .elementary 小学５年生
     .subject-section
-        .grade
-            .grade-title 中３
-            = render 'commons/answer_block', answers: @grade3_answers_geography
-
-        .grade
-            .grade-title 中２
-            = render 'commons/answer_block', answers: @grade2_answers_geography
-
-        .grade
-            .grade-title 中１
-            = render 'commons/answer_block', answers: @grade1_answers_geography
-
-
-    .subject-title-mini 公民
+        = render 'commons/answer_box', answers: @grade5_answers_japanese
+        = render 'commons/answer_box', answers: @grade5_answers_math
+        = render 'commons/answer_box', answers: @grade5_answers_history
+        = render 'commons/answer_box', answers: @grade5_answers_geography
+        = render 'commons/answer_box', answers: @grade5_answers_civics
+        = render 'commons/answer_box', answers: @grade5_answers_science
+    .elementary 小学４年生
     .subject-section
-        .grade
-            .grade-title 中３
-            = render 'commons/answer_block', answers: @grade3_answers_civics
-
-        .grade
-            .grade-title 中２
-            = render 'commons/answer_block', answers: @grade2_answers_civics
-
-        .grade
-            .grade-title 中１
-            = render 'commons/answer_block', answers: @grade1_answers_civics
-
-
-    .subject-title 理科
-    .subject-section
-        .grade
-            .grade-title 中３
-            = render 'commons/answer_block', answers: @grade3_answers_science
-
-        .grade
-            .grade-title 中２
-            = render 'commons/answer_block', answers: @grade2_answers_science
-
-        .grade
-            .grade-title 中１
-            = render 'commons/answer_block', answers: @grade1_answers_science
-
-
-    .subject-title 英語
-    .subject-section
-        .grade
-            .grade-title 中３
-            = render 'commons/answer_block', answers: @grade3_answers_english
-
-        .grade
-            .grade-title 中２
-            = render 'commons/answer_block', answers: @grade2_answers_english
-
-        .grade
-            .grade-title 中１
-            = render 'commons/answer_block', answers: @grade1_answers_english
-
-    .elementary 小学生
-    .subject-title 国語
-    .subject-section
-        .grade
-            .grade-title 小６
-            = render 'commons/answer_block', answers: @grade6_answers_japanese
-
-        .grade
-            .grade-title 小５
-            = render 'commons/answer_block', answers: @grade5_answers_japanese
-
-        .grade
-            .grade-title 小４
-            = render 'commons/answer_block', answers: @grade4_answers_japanese
-
-    .subject-title 算数
-    .subject-section
-        .grade
-            .grade-title 小６
-            = render 'commons/answer_block', answers: @grade6_answers_math
-
-        .grade
-            .grade-title 小５
-            = render 'commons/answer_block', answers: @grade5_answers_math
-
-        .grade
-            .grade-title 小４
-            = render 'commons/answer_block', answers: @grade4_answers_math
-
-
-    .subject-title 社会
-    .subject-title-mini 歴史
-    .subject-section
-        .grade
-            .grade-title 小６
-            = render 'commons/answer_block', answers: @grade6_answers_history
-
-        .grade
-            .grade-title 小５
-            = render 'commons/answer_block', answers: @grade5_answers_history
-
-        .grade
-            .grade-title 小４
-            = render 'commons/answer_block', answers: @grade4_answers_history
-
-
-    .subject-title-mini 地理
-    .subject-section
-        .grade
-            .grade-title 小６
-            = render 'commons/answer_block', answers: @grade6_answers_geography
-
-        .grade
-            .grade-title 小５
-            = render 'commons/answer_block', answers: @grade5_answers_geography
-
-        .grade
-            .grade-title 小４
-            = render 'commons/answer_block', answers: @grade4_answers_geography
-
-
-    .subject-title-mini 公民
-    .subject-section
-        .grade
-            .grade-title 小６
-            = render 'commons/answer_block', answers: @grade6_answers_civics
-
-        .grade
-            .grade-title 小５
-            = render 'commons/answer_block', answers: @grade5_answers_civics
-
-        .grade
-            .grade-title 小４
-            = render 'commons/answer_block', answers: @grade4_answers_civics
-
-
-    .subject-title 理科
-    .subject-section
-        .grade
-            .grade-title 小６
-            = render 'commons/answer_block', answers: @grade6_answers_science
-
-        .grade
-            .grade-title 小５
-            = render 'commons/answer_block', answers: @grade5_answers_science
-
-        .grade
-            .grade-title 小４
-            = render 'commons/answer_block', answers: @grade4_answers_science
+        = render 'commons/answer_box', answers: @grade4_answers_japanese
+        = render 'commons/answer_box', answers: @grade4_answers_math
+        = render 'commons/answer_box', answers: @grade4_answers_history
+        = render 'commons/answer_box', answers: @grade4_answers_geography
+        = render 'commons/answer_box', answers: @grade4_answers_civics
+        = render 'commons/answer_box', answers: @grade4_answers_science
