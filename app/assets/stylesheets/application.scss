@@ -16,6 +16,9 @@ img {
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 20px;
+    &-mini {
+        font-weight: bold;
+    }
 }
 
 
@@ -31,20 +34,13 @@ img {
 
 }
 
-.grade1 {
+.grade-title {
     background-color:#C7DEF1;
-}
-
-.grade2 {
-    background-color:#C7F1E8;
-}
-
-.grade3 {
-    background-color:#F8CDBC;
+    margin-bottom: 8px;
 }
 
 .juniorhigh {
-    background-color: darkslategrey;
+    background-color: navy;
     color: white;
     font-size: 30px;
 }
@@ -62,3 +58,17 @@ img {
     padding: 3px;
     margin-bottom: 10px;
 }
+
+
+.button {
+    height: 45px;
+    font-size: 20px;
+
+}
+
+.button-wide {
+    width:80%;
+    margin-bottom: 20px;
+}
+
+
