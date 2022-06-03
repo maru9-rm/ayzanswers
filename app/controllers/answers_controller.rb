@@ -71,9 +71,9 @@ class AnswersController < ApplicationController
     def create
         @answer = current_user.answers.build(answer_params)
         if @answer.save
-            redirect_to answer_path(@answer), notice: '保存できたよ'
+            redirect_to answer_path(@answer), notice: '保存しました。'
         else
-            flash.now[:error] = '保存に失敗しました'
+            flash.now[:error] = '保存に失敗しました。'
             render :new
         end
     end

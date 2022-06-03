@@ -4,7 +4,7 @@
     .answer-info.mb-5.mt-5
         %h2=I18n.t("enum.grades.#{@answer.grade}")
         %h2=I18n.t("enum.subjects.#{@answer.subject}")
-        %h3=@answer.memo
+        %h3 備考：#{@answer.memo}
         %h1=@answer.title
         
 .answer-image.mt-5
