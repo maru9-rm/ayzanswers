@@ -2,12 +2,12 @@ class AnswersController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        grade1_answers = Answer.where(grade: 1)
-        grade2_answers = Answer.where(grade: 2)
-        grade3_answers = Answer.where(grade: 3)
-        grade4_answers = Answer.where(grade: 4)
-        grade5_answers = Answer.where(grade: 5)
-        grade6_answers = Answer.where(grade: 6)
+        grade1_answers = Answer.where(grade: 1).order(:title)
+        grade2_answers = Answer.where(grade: 2).order(:title)
+        grade3_answers = Answer.where(grade: 3).order(:title)
+        grade4_answers = Answer.where(grade: 4).order(:title)
+        grade5_answers = Answer.where(grade: 5).order(:title)
+        grade6_answers = Answer.where(grade: 6).order(:title)
 
         @grade1_answers_japanese = grade1_answers.where(subject: 1)
         @grade1_answers_math = grade1_answers.where(subject: 2)
