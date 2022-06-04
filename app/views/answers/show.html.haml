@@ -9,7 +9,7 @@
         
 .answer-image.mt-5
     -@answer.image.each do |image|
-        =cl_image_tag(image)
+        =cl_image_tag(image.blob.key)
 
 .container.pb-5.mt-100
     =link_to answer_path, data: { method: 'delete', confirm: "本当に削除しますか？"} do
