@@ -27,7 +27,7 @@ gem 'binding_of_caller'
 gem 'devise'
 gem 'hamlit'
 gem 'bootstrap-sass', '~> 3.3.6'
-
+gem 'cloudinary'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
