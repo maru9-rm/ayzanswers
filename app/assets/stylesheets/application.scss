@@ -1,16 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 .container {
     text-align: center;
 }
-
 
 h1 {
     font-weight: bold;
     margin-bottom: 50px;
     font-size: 50px;
-
 }
  
 img {
@@ -32,7 +31,6 @@ img {
         font-weight: bold;
     }
 }
-
 
 .subject-section {
     display: flex;
@@ -71,9 +69,6 @@ img {
     background-color: whitesmoke;
     border-radius: 10px;
     padding: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     a {
         display: block;
@@ -113,4 +108,8 @@ img {
 
 .form-section {
     margin-bottom: 30px;
+}
+
+.block {
+    display: block;
 }
