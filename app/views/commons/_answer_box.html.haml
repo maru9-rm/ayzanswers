@@ -1,8 +1,7 @@
 -if answers.empty?
 -else
     -answers.each do |answer|
-        .grade.col-sm-3.col-6
-            =link_to answer_path(answer) do
-                .answer-item
-                    =I18n.t("enum.subjects.#{answer.subject}")
-                =answer.title
+        =link_to answer_path(answer),class: "grade col-sm-3 col-6" do
+            .answer-item
+                =I18n.t("enum.subjects.#{answer.subject}")
+            =answer.title
