@@ -11,9 +11,12 @@
     -@answer.image.each do |image|
         =cl_image_tag(image.blob.key)
 .container.pb-5.mt-100
+    =link_to root_path do
+        %button.btn.btn-primary.btn-lg.button-wide 一覧ページに戻る
+
+.container.pb-5
     =link_to edit_answer_path do
         %button.btn.btn-primary.btn-lg.button-wide 編集する
-
 
 .container.pb-5
     =link_to answer_path, data: { method: 'delete', confirm: "本当に削除しますか？"} do
