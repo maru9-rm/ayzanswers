@@ -1,9 +1,133 @@
 .container.mb-5
-    %h1 模範解答一覧
+    %h1 AYZANSWERS
 
     -# = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete'}
     = link_to new_answer_path do 
         %button.button.button-wide.btn.btn-primary 新しい答えを登録する
+
+    .search-bar 絞り込み検索
+
+    = search_form_for @q, class: 'mb-5' do |f|
+        .row.d-flex.justify-content-center
+            .form-group.col-4
+                %label.search-item.mt-4
+                    %span 学年
+                .checkbox.text-left.ms-4
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :grade_eq_any , {multiple: true} , 3, nil
+                            = "中３"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :grade_eq_any , {multiple: true} , 2, nil
+                            = "中２"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :grade_eq_any , {multiple: true} , 1, nil
+                            = "中１"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :grade_eq_any , {multiple: true} , 6, nil
+                            = "小６"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :grade_eq_any , {multiple: true} , 5, nil
+                            = "小５"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :grade_eq_any , {multiple: true} , 4, nil
+                            = "小４"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :grade_eq_any , {multiple: true} , 7, nil
+                            = "中学生"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :grade_eq_any , {multiple: true} , 8, nil
+                            = "小学生"
+            .form-group.col-4
+                %label.search-item.mt-4
+                    %span 教科
+                .checkbox.text-left.ms-4
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :subject_eq_any , {multiple: true} , 1, nil
+                            = "国語"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :subject_eq_any , {multiple: true} , 2, nil
+                            = "数学/算数"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :subject_eq_any , {multiple: true} , 5, nil
+                            = "歴史"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :subject_eq_any , {multiple: true} , 6, nil
+                            = "地理"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :subject_eq_any , {multiple: true} , 7, nil
+                            = "公民/社会"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :subject_eq_any , {multiple: true} , 3, nil
+                            = "理科"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :subject_eq_any , {multiple: true} , 4, nil
+                            = "英語"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :subject_eq_any , {multiple: true} , 8, nil
+                            = "その他"
+            .form-group.col-4
+                %label.search-item.mt-4
+                    %span テキスト
+                .checkbox.text-left.ms-4
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :textbook_eq_any , {multiple: true} , 1, nil
+                            = "実力錬成"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :textbook_eq_any , {multiple: true} , 2, nil
+                            = "Keyワーク"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :textbook_eq_any , {multiple: true} , 3, nil
+                            = "必修テキスト"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :textbook_eq_any , {multiple: true} , 4, nil
+                            = "教科書マスター"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :textbook_eq_any , {multiple: true} , 5, nil
+                            = "新ワーク"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :textbook_eq_any , {multiple: true} , 8, nil
+                            = "予習シリーズ系"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :textbook_eq_any , {multiple: true} , 6, nil
+                            = "その他のテキスト"
+                    .checkbox-default.my-1
+                        %label
+                            = f.check_box :textbook_eq_any , {multiple: true} , 7, nil
+                            = "プリント"
+        .search-done-btn
+            = f.submit "絞り込む", class: "btn btn-primary btn-lg"
+
+
+    -if @answers == Answer.all
+    -else
+        .subject-section
+            =render 'commons/answer_box', answers: @answers
+
+
+    %h1.mt-100 模範解答一覧
     .juniorhigh 中学３年生
     .subject-section
         = render 'commons/answer_box', answers: @grade3_answers_japanese

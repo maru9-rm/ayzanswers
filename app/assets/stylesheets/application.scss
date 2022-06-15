@@ -16,6 +16,12 @@ img {
     width: 100%;
 }
 
+input[type="checkbox"]{
+    font-size:50px;
+    height:15px;
+    width:15px;
+}
+
 .mt-100 {
     margin-top: 100px;
 }
@@ -62,6 +68,15 @@ img {
     margin-bottom: 3px;
     border-radius: 10px;
 }
+.search-bar {
+    background-color:#c85554;
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
 
 .grade {
     text-align: center;
@@ -141,4 +156,13 @@ img {
 
 .block {
     display: block;
+}
+
+.search-item {
+    width: 100%;
+    background-color:#DCDCDC;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 25px;
+
 }
