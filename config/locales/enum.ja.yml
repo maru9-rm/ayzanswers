@@ -16,3 +16,12 @@ ja:
       j1: '中学1年生'
       j2: '中学2年生'
       j3: '中学3年生'
+    textbooks:
+      jitsuren: "実力錬成"
+      keywork: "Keyワーク"
+      hisshu:  "必修テキスト"
+      master: "教科書マスター"
+      shinwork: "新ワーク"
+      other: "その他のテキスト"
+      print: "プリント"
+      yoshuseries: "予習シリーズ系"
