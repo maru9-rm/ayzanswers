@@ -57,7 +57,7 @@ class AnswersController < ApplicationController
         @grade6_answers_geography = grade6_answers.where(subject: 6)
         @grade6_answers_civics = grade6_answers.where(subject: 7)
 
-        @answers = Answer.all
+        @answers = 
     end
 
     def show
@@ -101,7 +101,7 @@ class AnswersController < ApplicationController
     private
 
     def answer_params
-        params.require(:answer).permit(:title, :memo, :grade, :subject, image: [])
+        params.require(:answer).permit(:title, :memo, :textbook, :grade, :subject, image: [])
     end
 
 end

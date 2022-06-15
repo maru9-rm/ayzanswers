@@ -24,6 +24,11 @@
             = f.label :subject, '教科', class: "label px-0"
         %div
             = f.select :subject, Answer.subjects.map { |k, v| [ I18n.t("enum.subjects.#{k}"), k ] }, {}, { class: 'form' }
+    .form-section
+        .text-start.mb-3
+            = f.label :textbook, 'テキスト', class: "label px-0"
+        %div
+            = f.select :textbook, Answer.textbooks.map { |k, v| [ I18n.t("enum.textbooks.#{k}"), k ] }, {}, { class: 'form' }
     = f.submit '保存', class: 'btn btn-primary button-wide my-5'
 
     = link_to root_path do

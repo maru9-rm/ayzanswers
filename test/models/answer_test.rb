@@ -6,6 +6,7 @@
 #  grade      :integer          not null
 #  memo       :text
 #  subject    :integer          not null
+#  textbook   :integer
 #  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
