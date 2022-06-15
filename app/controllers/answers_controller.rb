@@ -57,7 +57,8 @@ class AnswersController < ApplicationController
         @grade6_answers_geography = grade6_answers.where(subject: 6)
         @grade6_answers_civics = grade6_answers.where(subject: 7)
 
-        @answers = 
+        @q = Answer.ransack(params[:q])
+        @answers = @q.result
     end
 
     def show

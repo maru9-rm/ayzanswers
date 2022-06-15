@@ -9,6 +9,7 @@ ja:
       history: '歴史'
       geography: '地理'
       civics: '公民'
+      other: 'その他'
     grades:
       e4: '小学4年生'
       e5: '小学5年生'
@@ -16,6 +17,8 @@ ja:
       j1: '中学1年生'
       j2: '中学2年生'
       j3: '中学3年生'
+      jh: '中学生'
+      el: '小学生'
     textbooks:
       jitsuren: "実力錬成"
       keywork: "Keyワーク"
