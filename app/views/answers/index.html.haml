@@ -12,7 +12,7 @@
             .form-group.col-4
                 %label.search-item.mt-4
                     %span 学年
-                .checkbox.text-left.ms-4
+                .checkbox.text-left.ms-2
                     .checkbox-default.my-1
                         %label
                             = f.check_box :grade_eq_any , {multiple: true} , 3, nil
@@ -48,7 +48,7 @@
             .form-group.col-4
                 %label.search-item.mt-4
                     %span 教科
-                .checkbox.text-left.ms-4
+                .checkbox.text-left.ms-2
                     .checkbox-default.my-1
                         %label
                             = f.check_box :subject_eq_any , {multiple: true} , 1, nil
@@ -84,7 +84,7 @@
             .form-group.col-4
                 %label.search-item.mt-4
                     %span テキスト
-                .checkbox.text-left.ms-4
+                .checkbox.text-left.ms-2
                     .checkbox-default.my-1
                         %label
                             = f.check_box :textbook_eq_any , {multiple: true} , 1, nil
@@ -92,27 +92,27 @@
                     .checkbox-default.my-1
                         %label
                             = f.check_box :textbook_eq_any , {multiple: true} , 2, nil
-                            = "Keyワーク"
+                            = "Keyﾜｰｸ"
                     .checkbox-default.my-1
                         %label
                             = f.check_box :textbook_eq_any , {multiple: true} , 3, nil
-                            = "必修テキスト"
+                            = "必修ﾃｷｽﾄ"
                     .checkbox-default.my-1
                         %label
                             = f.check_box :textbook_eq_any , {multiple: true} , 4, nil
-                            = "教科書マスター"
+                            = "教科書ﾏｽﾀｰ"
                     .checkbox-default.my-1
                         %label
                             = f.check_box :textbook_eq_any , {multiple: true} , 5, nil
-                            = "新ワーク"
+                            = "新ﾜｰｸ"
                     .checkbox-default.my-1
                         %label
                             = f.check_box :textbook_eq_any , {multiple: true} , 8, nil
-                            = "予習シリーズ系"
+                            = "予習ｼﾘｰｽﾞ系"
                     .checkbox-default.my-1
                         %label
                             = f.check_box :textbook_eq_any , {multiple: true} , 6, nil
-                            = "その他のテキスト"
+                            = "その他のﾃｷｽﾄ"
                     .checkbox-default.my-1
                         %label
                             = f.check_box :textbook_eq_any , {multiple: true} , 7, nil
