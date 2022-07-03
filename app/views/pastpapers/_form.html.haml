@@ -1,0 +1,58 @@
+= form_with(model: pastpaper, local: true) do |f|
+
+    .form-section.mt-5
+        %div
+            = f.select :exam, Pastpaper.exams.map { |k, v| [ I18n.t("enum.exams.#{k}"), k ] }, {}, { class: 'form' }
+    
+    .form-section
+        .text-start.mb-3
+            = f.label :school_name, '学校名', class: "label px-0"
+        %div
+            = f.select :school_name, Pastpaper.school_names.map { |k, v| [ I18n.t("enum.school_names.#{k}"), k ] }, {}, { class: 'form' }
+
+    .form-section
+        .text-start.mb-3
+            = f.label :year, '年度', class: "label px-0"
+        %div
+            = f.select :year, Pastpaper.years.map  { |k, v| [ I18n.t("enum.years.#{k}"), k ] }, {}, { class: 'form' }
+    .form-section
+        .text-start.mb-3
+            = f.label :japanese_image, '国語', class: "label px-0"
+        %div.file_field
+            = f.file_field :japanese_image, class: "form"
+        .text-end.annotation ※クリックして画像を選択するか、枠内に直接ドラッグ&ドロップしてください。
+    .form-section
+        .text-start.mb-3
+            = f.label :math_image, '数学/算数', class: "label px-0"
+        %div.file_field
+            = f.file_field :math_image, class: "form"
+        .text-end.annotation ※クリックして画像を選択するか、枠内に直接ドラッグ&ドロップしてください。
+    .form-section
+        .text-start.mb-3
+            = f.label :social_study_image, '社会', class: "label px-0"
+        %div.file_field
+            = f.file_field :social_study_image, class: "form"
+        .text-end.annotation ※クリックして画像を選択するか、枠内に直接ドラッグ&ドロップしてください。
+    .form-section
+        .text-start.mb-3
+            = f.label :science_image, '理科', class: "label px-0"
+        %div.file_field
+            = f.file_field :science_image, class: "form"
+        .text-end.annotation ※クリックして画像を選択するか、枠内に直接ドラッグ&ドロップしてください。
+    .form-section
+        .text-start.mb-3
+            = f.label :english_image, '英語', class: "label px-0"
+        %div.file_field
+            = f.file_field :english_image, class: "form"
+        .text-end.annotation ※クリックして画像を選択するか、枠内に直接ドラッグ&ドロップしてください。
+
+    .form-section
+        .text-start.mb-3
+            = f.label :memo, '備考', class: "label px-0"
+        %div
+            = f.text_area :memo, class: "form"
+
+    = f.submit '保存', class: 'btn btn-primary button-wide my-5'
+
+    = link_to root_path do
+        %button.btn.btn-danger.button-wide.mb-5 キャンセル

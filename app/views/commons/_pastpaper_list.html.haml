@@ -1,0 +1,23 @@
+-if pastpapers.empty?
+-else
+    .d-flex.row
+        -pastpapers.each do |pastpaper|
+            =link_to pastpaper_path(pastpaper),class: "pastpaper-list-item col-sm-6 col-12 grade ps-4" do
+                -if pastpaper.exam === "high"
+                    .d-flex
+                        -if pastpaper.school_name == "other"
+                            %div
+                                #{pastpaper.memo}　
+                        -else   
+                            %div
+                                #{I18n.t("enum.school_names.#{pastpaper.school_name}")}高校　
+                        #{I18n.t("enum.years.#{pastpaper.year}")}
+                -else
+                    .d-flex.red
+                        -if pastpaper.school_name == "other"
+                            %div
+                                #{pastpaper.memo}　
+                        -else   
+                            %div
+                                #{I18n.t("enum.school_names.#{pastpaper.school_name}")}中学校　
+                        #{I18n.t("enum.years.#{pastpaper.year}")} 

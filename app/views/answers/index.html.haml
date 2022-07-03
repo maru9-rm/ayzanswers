@@ -1,7 +1,10 @@
+.float-end.me-5
+    = link_to '→入試過去問', pastpapers_path
+    
 .container.mb-5
-    %h1 AYZANSWERS
+    %h1.mb-3 AYZANSWERS 
+    %h2.mb-5 再テスト
 
-    -# = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete'}
     = link_to new_answer_path do 
         %button.button.button-wide.btn.btn-primary 新しい答えを登録する
 
