@@ -10,27 +10,27 @@
 -if @pastpaper.japanese_image.attached?
     .answer-image.mt-5
         .text-center.display-4 □□□ 国語 □□□
-        = image_tag(@pastpaper.japanese_image)
+        =cl_image_tag(@pastpaper.japanese_image.blob.key)
 
 -if @pastpaper.math_image.attached?
     .answer-image.mt-5
         .text-center.display-4 □□□ 数学 □□□
-        = image_tag(@pastpaper.math_image)
+        =cl_image_tag(@pastpaper.math_image.blob.key)
 
 -if @pastpaper.social_study_image.attached?
     .answer-image.mt-5
         .text-center.display-4 □□□ 社会 □□□
-        = image_tag(@pastpaper.social_study_image)
+        =cl_image_tag(@pastpaper.social_study_image.blob.key)
     
 -if @pastpaper.science_image.attached?
     .answer-image.mt-5
         .text-center.display-4 □□□ 理科 □□□
-        = image_tag(@pastpaper.science_image)
+        =cl_image_tag(@pastpaper.science_image.blob.key)
 
 -if @pastpaper.english_image.attached?
     .answer-image.mt-5
         .text-center.display-4 □□□ 英語 □□□
-        = image_tag(@pastpaper.english_image)
+        =cl_image_tag(@pastpaper.english_image.blob.key)
 
 .container.pb-5.mt-100
     =link_to pastpapers_path do
