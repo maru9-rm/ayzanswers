@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     $('h1').on('click', () => {
           axios.get('/')
         .then((response) => {
-          window.alert("👍")
         })
       })
   })

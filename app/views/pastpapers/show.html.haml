@@ -1,0 +1,46 @@
+.container.pt-5
+    =link_to pastpapers_path do
+        %button.btn.btn-primary.btn-lg 一覧ページに戻る
+    .answer-info.mb-5.mt-5
+        %h2=I18n.t("enum.exams.#{@pastpaper.exam}")
+        %h2=I18n.t("enum.school_names.#{@pastpaper.school_name}")
+        %h2=I18n.t("enum.years.#{@pastpaper.year}")
+        %h3=@pastpaper.memo
+
+-if @pastpaper.japanese_image.attached?
+    .answer-image.mt-5
+        .text-center.display-4 □□□ 国語 □□□
+        = image_tag(@pastpaper.japanese_image)
+
+-if @pastpaper.math_image.attached?
+    .answer-image.mt-5
+        .text-center.display-4 □□□ 数学 □□□
+        = image_tag(@pastpaper.math_image)
+
+-if @pastpaper.social_study_image.attached?
+    .answer-image.mt-5
+        .text-center.display-4 □□□ 社会 □□□
+        = image_tag(@pastpaper.social_study_image)
+    
+-if @pastpaper.science_image.attached?
+    .answer-image.mt-5
+        .text-center.display-4 □□□ 理科 □□□
+        = image_tag(@pastpaper.science_image)
+
+-if @pastpaper.english_image.attached?
+    .answer-image.mt-5
+        .text-center.display-4 □□□ 英語 □□□
+        = image_tag(@pastpaper.english_image)
+
+.container.pb-5.mt-100
+    =link_to pastpapers_path do
+        %button.btn.btn-primary.btn-lg.button-wide 一覧ページに戻る
+
+.container.pb-5
+    =link_to edit_pastpaper_path do
+        %button.btn.btn-primary.btn-lg.button-wide 編集する
+
+.container.pb-5
+    =link_to pastpaper_path, data: { method: 'delete', confirm: "本当に削除しますか？"} do
+        %button.btn.btn-danger.btn-lg.button-wide この答えを削除する
+    

@@ -1,0 +1,25 @@
+-if pastpapers.empty?
+-else
+    -pastpapers.each do |pastpaper|
+        =link_to pastpaper_path(pastpaper),class: "grade col-sm-3 col-6" do
+            -if pastpaper.exam === "high"
+                -if pastpaper.school_name == "other"
+                    .answer-item
+                        = pastpaper.memo 
+                -else   
+                    .answer-item
+                        =I18n.t("enum.school_names.#{pastpaper.school_name}")
+                %div
+                    =I18n.t("enum.exams.#{pastpaper.exam}")
+                %div
+                    =I18n.t("enum.years.#{pastpaper.year}")           
+            -else
+                .answer-item.red
+                    =I18n.t("enum.school_names.#{pastpaper.school_name}")
+                %div.red
+                    =I18n.t("enum.exams.#{pastpaper.exam}")
+                %div.red
+                    =I18n.t("enum.years.#{pastpaper.year}")
+                -if pastpaper.school_name == 14 
+                    %div
+                        = pastpaper.memo     
