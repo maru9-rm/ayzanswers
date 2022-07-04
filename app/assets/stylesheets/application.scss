@@ -185,10 +185,27 @@ img {
 }
 
 .annotation {
-    font-size: 6px;
+    font-size: 9px;
 }
 
 .pastpaper-list-item {
     font-size: 1.2em;
     line-height: 30px;
+}
+
+.manual-wrapper {
+
+    h2 {
+        border-bottom: solid 1px black;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-top: 30px;
+        padding-left: 20px;
+    }
+    p {
+        padding-left: 40px;
+    }
 }
