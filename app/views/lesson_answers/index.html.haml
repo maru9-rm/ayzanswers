@@ -1,0 +1,19 @@
+.d-flex.justify-content-between
+    .ms-5.mt-3
+        = link_to '→再テスト', root_path
+
+    .me-5.mt-3
+        = link_to '→入試過去問', pastpapers_path
+    
+.container.mb-5.mt-3
+    %h1.mb-3 AYZANSWERS 
+    %h2.mb-5 個別指導用
+
+    = link_to new_lesson_answer_path do 
+        %button.button.button-wide.btn.btn-primary 新しい答えを登録する
+
+
+    .mt-100
+    .juniorhigh.mb-4 模範解答一覧
+    %div
+        = render 'commons/lesson_answer_box', lesson_answers: @lesson_answers

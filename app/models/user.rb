@@ -22,8 +22,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :answers
   has_many :pastpapers
-
-
+  has_many :lesson_answers
 
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable,
