@@ -1,0 +1,8 @@
+.container
+    %ul
+        - @lesson_answer.errors.full_messages.each do |message|
+            %li= message
+    
+    %h1 編集ページ
+
+    =render 'form', lesson_answer: @lesson_answer

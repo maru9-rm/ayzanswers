@@ -1,0 +1,8 @@
+-if lesson_answers.nil?
+-else
+    -lesson_answers.each do |lesson_answer|
+        =link_to lesson_answer_path(lesson_answer),class: "grade col-sm-3 col-6" do
+            .answer-item
+                =lesson_answer.title
+            %div.red
+                =lesson_answer.student

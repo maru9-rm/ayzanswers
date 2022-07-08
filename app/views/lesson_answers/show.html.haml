@@ -1,0 +1,25 @@
+.container.pt-5
+    =link_to lesson_answers_path do
+        %button.btn.btn-primary.btn-lg 一覧ページに戻る
+    .answer-info.mb-5.mt-5
+        %h2=@lesson_answer.title
+        %h2=@lesson_answer.student
+        %h3=@lesson_answer.memo
+        
+.answer-image.mt-5
+    -@lesson_answer.image.each do |image|
+        -# =cl_image_tag(image.blob.key)
+        =image_tag(image)
+
+.container.pb-5.mt-100
+    =link_to lesson_answers_path do
+        %button.btn.btn-primary.btn-lg.button-wide 一覧ページに戻る
+
+.container.pb-5
+    =link_to edit_lesson_answer_path do
+        %button.btn.btn-primary.btn-lg.button-wide 編集する
+
+.container.pb-5
+    =link_to lesson_answer_path, data: { method: 'delete', confirm: "本当に削除しますか？"} do
+        %button.btn.btn-danger.btn-lg.button-wide この答えを削除する
+    
