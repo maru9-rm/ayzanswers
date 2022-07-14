@@ -47,11 +47,11 @@
                     .checkbox-default.my-1
                         %label
                             = f.check_box :grade_eq_any , {multiple: true} , 7, nil
-                            = "中学生"
+                            = "中学生共通"
                     .checkbox-default.my-1
                         %label
                             = f.check_box :grade_eq_any , {multiple: true} , 8, nil
-                            = "小学生"
+                            = "小学生共通"
             .form-group.col-4
                 %label.search-item.mt-4
                     %span 教科
@@ -163,6 +163,17 @@
         = render 'commons/answer_box', answers: @grade1_answers_science
         = render 'commons/answer_box', answers: @grade1_answers_english
 
+    .juniorhigh 中学生共通
+    .subject-section    
+        = render 'commons/answer_box', answers: @jh_answers_japanese
+        = render 'commons/answer_box', answers: @jh_answers_math
+        = render 'commons/answer_box', answers: @jh_answers_history
+        = render 'commons/answer_box', answers: @jh_answers_geography
+        = render 'commons/answer_box', answers: @jh_answers_civics
+        = render 'commons/answer_box', answers: @jh_answers_science
+        = render 'commons/answer_box', answers: @jh_answers_english
+
+
 
     .elementary 小学６年生
     .subject-section
@@ -188,3 +199,11 @@
         = render 'commons/answer_box', answers: @grade4_answers_geography
         = render 'commons/answer_box', answers: @grade4_answers_civics
         = render 'commons/answer_box', answers: @grade4_answers_science
+    .elementary 小学生共通
+    .subject-section
+        = render 'commons/answer_box', answers: @el_answers_japanese
+        = render 'commons/answer_box', answers: @el_answers_math
+        = render 'commons/answer_box', answers: @el_answers_history
+        = render 'commons/answer_box', answers: @el_answers_geography
+        = render 'commons/answer_box', answers: @el_answers_civics
+        = render 'commons/answer_box', answers: @el_answers_science

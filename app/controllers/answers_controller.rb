@@ -8,6 +8,8 @@ class AnswersController < ApplicationController
         grade4_answers = Answer.where(grade: 4).order(:title)
         grade5_answers = Answer.where(grade: 5).order(:title)
         grade6_answers = Answer.where(grade: 6).order(:title)
+        jh_answers = Answer.where(grade: 7).order(:title)
+        el_answers = Answer.where(grade: 8).order(:title)
 
         @grade1_answers_japanese = grade1_answers.where(subject: 1)
         @grade1_answers_math = grade1_answers.where(subject: 2)
@@ -56,6 +58,22 @@ class AnswersController < ApplicationController
         @grade6_answers_history = grade6_answers.where(subject: 5)
         @grade6_answers_geography = grade6_answers.where(subject: 6)
         @grade6_answers_civics = grade6_answers.where(subject: 7)
+
+        @jh_answers_japanese = jh_answers.where(subject: 1)
+        @jh_answers_math = jh_answers.where(subject: 2)
+        @jh_answers_science = jh_answers.where(subject: 3)
+        @jh_answers_english = jh_answers.where(subject: 4)
+        @jh_answers_history = jh_answers.where(subject: 5)
+        @jh_answers_geography = jh_answers.where(subject: 6)
+        @jh_answers_civics = jh_answers.where(subject: 7)
+
+        @el_answers_japanese = el_answers.where(subject: 1)
+        @el_answers_math = el_answers.where(subject: 2)
+        @el_answers_science = el_answers.where(subject: 3)
+        @el_answers_english = el_answers.where(subject: 4)
+        @el_answers_history = el_answers.where(subject: 5)
+        @el_answers_geography = el_answers.where(subject: 6)
+        @el_answers_civics = el_answers.where(subject: 7)
 
         @q = Answer.ransack(params[:q])
         @answers = @q.result.order(:subject)
