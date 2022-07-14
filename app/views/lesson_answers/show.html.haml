@@ -8,8 +8,8 @@
         
 .answer-image.mt-5
     -@lesson_answer.image.each do |image|
-        -# =cl_image_tag(image.blob.key)
-        =image_tag(image)
+        =cl_image_tag(image.blob.key)
+        -# =image_tag(image)
 
 .container.pb-5.mt-100
     =link_to lesson_answers_path do
