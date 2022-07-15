@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources 'searches', only: :index
   end
 
+  resources 'storages'
+
   resources 'lesson_answers'
 
   resource 'manuals', only: :show

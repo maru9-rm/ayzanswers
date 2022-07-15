@@ -1,5 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "header";
+@import "button";
+
 
 
 .container {
@@ -52,7 +55,7 @@ img {
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 3px;
-    border-radius: 10px;
+    border-radius: 4px;
 
 }
 
@@ -62,7 +65,7 @@ img {
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 3px;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 .search-bar {
     background-color:#c85554;
@@ -70,7 +73,7 @@ img {
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 3px;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 
@@ -78,7 +81,7 @@ img {
     text-align: center;
     border: 2px solid white;
     background-color: whitesmoke;
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 3px;
 
     a {
@@ -121,17 +124,6 @@ img {
 }
 
 
-.button {
-    height: 45px;
-    font-size: 20px;
-    margin-bottom: 20px;
-
-}
-
-.button-wide {
-    width:80%;
-    
-}
 
 
 .label {
@@ -157,7 +149,7 @@ img {
 .search-item {
     width: 100%;
     background-color:#DCDCDC;
-    border-radius: 5px;
+    border-radius: 4px;
     font-weight: bold;
     line-height: 25px;
 
@@ -220,3 +212,31 @@ img {
     margin-bottom: 20px;
     margin-left: 100px;
 }
+
+.check-box-wrapper {
+
+    input[type=checkbox] {
+        transform: scale(1.5);
+        padding:5px ;
+        margin: 0;
+        margin-left: 10px;
+    }
+}
+
+.check-box {
+    line-height: 30px;
+}
+
+.check-box-label {
+    font-size: 1.4em;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+
+
+

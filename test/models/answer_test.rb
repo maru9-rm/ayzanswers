@@ -5,6 +5,7 @@
 #  id         :bigint           not null, primary key
 #  grade      :integer          not null
 #  memo       :text
+#  storage    :boolean          default(FALSE)
 #  subject    :integer          not null
 #  textbook   :integer
 #  title      :string           not null

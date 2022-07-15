@@ -1,13 +1,7 @@
-.d-flex.justify-content-between
-    .ms-5.mt-3
-        = link_to '取扱説明書', manuals_path
+= render 'commons/header'
 
-    .me-5.mt-3
-        = link_to '→再テスト', root_path
-    
-.container.mb-5.mt-3
-    %h1.mb-3 AYZANSWERS 
-    %h2.mb-5 入試問題
+.container.mb-5.mt-5
+    %h1.mb-5 入試問題
 
     = link_to new_pastpaper_path do 
         %button.button.button-wide.btn.btn-primary 新しい答えを登録する
