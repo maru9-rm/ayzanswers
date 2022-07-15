@@ -2,14 +2,16 @@ class AnswersController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        grade1_answers = Answer.where(grade: 1).order(:title)
-        grade2_answers = Answer.where(grade: 2).order(:title)
-        grade3_answers = Answer.where(grade: 3).order(:title)
-        grade4_answers = Answer.where(grade: 4).order(:title)
-        grade5_answers = Answer.where(grade: 5).order(:title)
-        grade6_answers = Answer.where(grade: 6).order(:title)
-        jh_answers = Answer.where(grade: 7).order(:title)
-        el_answers = Answer.where(grade: 8).order(:title)
+        listed_answers = Answer.where(storage: false)
+
+        grade1_answers = listed_answers.where(grade: 1).order(:title)
+        grade2_answers = listed_answers.where(grade: 2).order(:title)
+        grade3_answers = listed_answers.where(grade: 3).order(:title)
+        grade4_answers = listed_answers.where(grade: 4).order(:title)
+        grade5_answers = listed_answers.where(grade: 5).order(:title)
+        grade6_answers = listed_answers.where(grade: 6).order(:title)
+        jh_answers = listed_answers.where(grade: 7).order(:title)
+        el_answers = listed_answers.where(grade: 8).order(:title)
 
         @grade1_answers_japanese = grade1_answers.where(subject: 1)
         @grade1_answers_math = grade1_answers.where(subject: 2)
@@ -120,7 +122,7 @@ class AnswersController < ApplicationController
     private
 
     def answer_params
-        params.require(:answer).permit(:title, :memo, :textbook, :grade, :subject, image: [])
+        params.require(:answer).permit(:title, :memo, :textbook, :grade, :subject, :storage, image: [])
     end
 
 end

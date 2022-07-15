@@ -1,0 +1,9 @@
+%div.mt-2.grade.text-start.fs-2.ps-3
+    =link_to edit_answer_path(answer) do
+        ⬜️
+        #{I18n.t("enum.grades.#{answer.grade}")} 
+        #{I18n.t("enum.subjects.#{answer.subject}")} 
+        #{I18n.t("enum.textbooks.#{answer.textbook}")} 
+        = answer.title
+
+

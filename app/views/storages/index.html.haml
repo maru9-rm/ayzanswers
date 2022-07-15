@@ -1,0 +1,8 @@
+= render 'commons/header'
+
+.container.mb-5.mt-5
+    %h1.mb-5 倉庫
+
+    .flex-box
+        -@storage_answers.each do |answer|
+            = render 'commons/storage_answer_box', answer: answer
