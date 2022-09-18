@@ -78,7 +78,7 @@ class AnswersController < ApplicationController
         @el_answers_civics = el_answers.where(subject: 7)
 
         @q = Answer.ransack(params[:q])
-        @answers = @q.result.order(:subject)
+        @answers = @q.result.order(grade: :desc).order(:subject).order(:textbook).order(:title)
     end
 
     def show

@@ -122,7 +122,7 @@
             = f.submit "絞り込む", class: "btn btn-primary btn-lg"
 
 
-    -if @answers == Answer.all.order(:subject)
+    -if @answers == Answer.all.order(grade: :desc).order(:subject).order(:textbook).order(:title)
     -else
         .subject-section
             =render 'commons/answer_box', answers: @answers
