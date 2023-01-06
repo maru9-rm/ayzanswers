@@ -40,8 +40,9 @@ class Pastpaper < ApplicationRecord
         nj: 11,
         fz: 12,
         jc: 13,
-        other: 14
+        other: 14,
         ps: 15
+        
     }
     enum year: {
         H14_2002: 2,
