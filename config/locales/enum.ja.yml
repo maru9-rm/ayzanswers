@@ -31,6 +31,7 @@ ja:
     exams:
       high: '高校入試'
       junior_high: '中学入試'
+      high_sg: '高校専願入試'
     school_names:
       sn: '西南'
       oh: '大濠'

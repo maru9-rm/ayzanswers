@@ -12,6 +12,15 @@
                             %div
                                 #{I18n.t("enum.school_names.#{pastpaper.school_name}")}高校　
                         #{I18n.t("enum.years.#{pastpaper.year}")}
+                -elsif pastpaper.exam === "high_sg"
+                    .d-flex
+                        -if pastpaper.school_name == "other"
+                            %div
+                                #{pastpaper.memo}　
+                        -else   
+                            %div
+                                #{I18n.t("enum.school_names.#{pastpaper.school_name}")}高校(専願)　
+                        #{I18n.t("enum.years.#{pastpaper.year}")}
                 -else
                     .d-flex.red
                         -if pastpaper.school_name == "other"

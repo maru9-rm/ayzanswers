@@ -24,7 +24,7 @@ class Pastpaper < ApplicationRecord
     has_one_attached :science_image
     has_one_attached :english_image
 
-    enum exam: { high: 0, junior_high: 1 }
+    enum exam: { high: 0, junior_high: 1, high_sg: 2 }
     enum school_name: {
         sn: 0,
         oh: 1,
